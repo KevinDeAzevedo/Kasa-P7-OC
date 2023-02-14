@@ -1,13 +1,13 @@
-import '../styles/Layout.css';
+import React from 'react';
 import Navigation from '../components/Navigation';
 
-function Home() {
+const About = () => {
   return (
     <div>
       <Navigation />
-      <h1>Accueil</h1>
+      <h1>À propos</h1>
     </div>
   );
-}
+};
 
-export default Home;
+export default About;
