@@ -1,4 +1,3 @@
-import '../styles/Layout.css';
 import Navigation from '../components/Navigation';
 
 function Home() {
