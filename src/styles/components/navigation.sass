@@ -5,8 +5,9 @@
   align-items: center
   height: 150px
   @media screen and (max-width: map-get($breakpoints, tiny-mobile))
-    flex-wrap: wrap
+    flex-direction: column
     justify-content: center
+    gap: 20px
 
 .logo
   width: auto
@@ -17,13 +18,16 @@
 .navigation
   display: flex
   font-size: 1.5rem
-  margin-left: 10px
-  gap: 50px
   white-space: nowrap
+  gap: 50px
   @media screen and (max-width: map-get($breakpoints, mobile))
+    width: 100%
+    gap: 0
+    text-align: end
     font-size: 0.8rem
     text-transform: uppercase
-    gap: 30px
+  @media screen and (max-width: map-get($breakpoints, tiny-mobile))
+    text-align: center
 
 .nav-active
   position: relative
