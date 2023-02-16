@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 
-const Product = () => {
+export default function Product() {
   const navigate = useNavigate();
   const { id } = useParams();
   const [product, setProduct] = useState([]);
@@ -36,6 +36,4 @@ const Product = () => {
       </ul>
     </div>
   );
-};
-
-export default Product;
+}
