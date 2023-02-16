@@ -24,7 +24,7 @@ export default function Home() {
     <div>
       <Navigation />
       <h1>Accueil</h1>
-      <div>
+      <div className="list">
         {items.map((item) => (
           <NavLink to={`/logement/${item.id}`} key={item.id}>
             <Card title={item.title} image={item.cover} />

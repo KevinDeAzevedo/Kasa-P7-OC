@@ -1,0 +1,23 @@
+.card
+  position: relative
+  width: 340px
+  overflow: hidden
+  &-image
+    position: relative
+    width: 100%
+    min-height: 340px
+    img
+      position: absolute
+      object-fit: cover
+      width: 100%
+      height: 100%
+      border-radius: 10px
+  &-title
+    position: absolute
+    z-index: 2
+    padding: 20px
+    left: 0
+    bottom: 0
+    color: white
+  @media screen and (max-width: map-get($breakpoints, tablet))
+    width: 100%
