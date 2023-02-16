@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Navigation from '../components/Navigation';
+import Card from '../components/Card';
 
 export default function Home() {
   const [items, setItems] = useState([]);
@@ -23,13 +24,13 @@ export default function Home() {
     <div>
       <Navigation />
       <h1>Accueil</h1>
-      <ul>
+      <div>
         {items.map((item) => (
           <NavLink to={`/logement/${item.id}`} key={item.id}>
-            <li>{item.title}</li>
+            <Card title={item.title} image={item.cover} />
           </NavLink>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
