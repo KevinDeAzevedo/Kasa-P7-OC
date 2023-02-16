@@ -1,3 +1,30 @@
+.header
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  height: 150px
+  @media screen and (max-width: map-get($breakpoints, tiny-mobile))
+    flex-wrap: wrap
+    justify-content: center
+
+.logo
+  width: auto
+  height: 69px
+  @media screen and (max-width: map-get($breakpoints, mobile))
+    height: 47px
+
+.navigation
+  display: flex
+  font-size: 1.5rem
+  margin-left: 10px
+  gap: 50px
+  white-space: nowrap
+  @media screen and (max-width: map-get($breakpoints, mobile))
+    font-size: 0.8rem
+    text-transform: uppercase
+    gap: 30px
+
 .nav-active
   position: relative
   text-decoration: underline
