@@ -22,7 +22,8 @@ const Product = () => {
       }
     }
     fetchData();
-  }, [id, navigate]);
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <div>
