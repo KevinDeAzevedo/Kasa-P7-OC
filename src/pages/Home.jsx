@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Card from '../components/Card';
 import HeroBanner from '../components/HeroBanner';
+import Footer from '../components/Footer';
 import herohome from '../assets/hero-home.webp';
 
 export default function Home() {
@@ -33,6 +34,7 @@ export default function Home() {
           </NavLink>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }
