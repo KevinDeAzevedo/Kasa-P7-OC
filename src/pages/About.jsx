@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import HeroBanner from '../components/HeroBanner';
+import heroabout from '../assets/hero-about.webp';
 import Accordion from '../components/Accordion';
 
 export default function About() {
@@ -21,7 +23,7 @@ export default function About() {
   return (
     <div>
       <Navigation />
-      <h1>À propos</h1>
+      <HeroBanner image={heroabout} />
       <div>
         {articles.map((article, index) => (
           <div key={`${article}-${index}`}>
