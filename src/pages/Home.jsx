@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Card from '../components/Card';
+import HeroBanner from '../components/HeroBanner';
+import herohome from '../assets/hero-home.webp';
 
 export default function Home() {
   const [items, setItems] = useState([]);
@@ -23,7 +25,7 @@ export default function Home() {
   return (
     <div>
       <Navigation />
-      <h1>Accueil</h1>
+      <HeroBanner title={'Chez vous, partout et ailleurs'} image={herohome} />
       <div className="list">
         {items.map((item) => (
           <NavLink to={`/logement/${item.id}`} key={item.id}>
