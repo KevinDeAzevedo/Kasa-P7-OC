@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 export default function Product() {
   const navigate = useNavigate();
@@ -34,6 +35,7 @@ export default function Product() {
           <li key={`${equipment}-${index}`}>{equipment}</li>
         ))}
       </ul>
+      <Footer />
     </div>
   );
 }
