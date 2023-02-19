@@ -24,7 +24,7 @@ export default function About() {
     <div>
       <Navigation />
       <HeroBanner image={heroabout} />
-      <div>
+      <div className="about-content">
         {articles.map((article, index) => (
           <div key={`${article}-${index}`}>
             <Accordion title={article.title} content={article.content} />
