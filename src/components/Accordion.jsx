@@ -10,7 +10,7 @@ export default function Accordion(props) {
     <div className="accordion">
       <div onClick={() => setVisible(!isVisible)} className="accordion-title">
         <h3>{title}</h3>
-        <div>
+        <div className="accordion-arrow">
           {isVisible ? (
             <img src={ArrowBot} alt="-" />
           ) : (
