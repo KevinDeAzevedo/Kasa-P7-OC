@@ -23,18 +23,23 @@ export default function Product() {
       }
     }
     fetchData();
-    // eslint-disable-next-line
-  }, []);
+  }, [id, navigate]);
 
   return (
     <div>
       <Navigation />
-      <h1>{product.title}</h1>
-      <ul>
-        {equipments.map((equipment, index) => (
-          <li key={`${equipment}-${index}`}>{equipment}</li>
-        ))}
-      </ul>
+      <div className="product">
+        <div className="product-slider">Carrousel</div>
+        <div className="product-header">
+          <h1>{product.title}</h1>
+        </div>
+        <div className="product-specs">Accordeons</div>
+        {/* <ul>
+          {equipments.map((equipment, index) => (
+            <li key={`${equipment}-${index}`}>{equipment}</li>
+          ))}
+        </ul> */}
+      </div>
       <Footer />
     </div>
   );
