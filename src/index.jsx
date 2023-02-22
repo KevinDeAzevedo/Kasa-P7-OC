@@ -6,9 +6,9 @@ import './styles/main.sass';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  // <React.StrictMode>
-  <div className="main-wrapper">
-    <Router />
-  </div>
-  // </React.StrictMode>
+  <>
+    <div className="main-wrapper">
+      <Router />
+    </div>
+  </>
 );
