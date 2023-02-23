@@ -7,17 +7,20 @@ export default function Product() {
   const navigate = useNavigate();
   const { id } = useParams();
   const [product, setProduct] = useState([]);
+  const [productPictures, setProductPictures] = useState([]);
   const [equipments, setEquipments] = useState([]);
-
-  const array = ['One', 'Two', 'Three', 'Four']; // lenght = 3
   const [index, setIndex] = useState(0);
 
   function prevClick() {
-    return index === 0 ? setIndex(array.length - 1) : setIndex(index - 1);
+    return index === 0
+      ? setIndex(productPictures.length - 1)
+      : setIndex(index - 1);
   }
 
   function nextClick() {
-    return index >= array.length - 1 ? setIndex(0) : setIndex(index + 1);
+    return index >= productPictures.length - 1
+      ? setIndex(0)
+      : setIndex(index + 1);
   }
 
   useEffect(() => {
@@ -28,6 +31,7 @@ export default function Product() {
         const foundProduct = data.find((product) => product.id === id);
         setProduct(foundProduct);
         setEquipments(foundProduct.equipments);
+        setProductPictures(foundProduct.pictures);
       } catch (error) {
         console.error(error);
         navigate('*');
@@ -45,7 +49,8 @@ export default function Product() {
           <h1>{product.title}</h1>
           <button onClick={prevClick}>Précédent</button>
           <div>
-            {array[index]} {index + 1}/{array.length}
+            <img src={productPictures[index]} alt="Aménagement intérieur" />
+            {index + 1}/{productPictures.length}
           </div>
           <button onClick={nextClick}>Suivant</button>
         </div>
