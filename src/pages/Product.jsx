@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import Slideshow from '../components/Slideshow';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -9,19 +10,6 @@ export default function Product() {
   const [product, setProduct] = useState([]);
   const [productPictures, setProductPictures] = useState([]);
   const [equipments, setEquipments] = useState([]);
-  const [index, setIndex] = useState(0);
-
-  function prevClick() {
-    return index === 0
-      ? setIndex(productPictures.length - 1)
-      : setIndex(index - 1);
-  }
-
-  function nextClick() {
-    return index >= productPictures.length - 1
-      ? setIndex(0)
-      : setIndex(index + 1);
-  }
 
   useEffect(() => {
     async function fetchData() {
@@ -47,12 +35,7 @@ export default function Product() {
         <div className="product-slider">Carrousel</div>
         <div className="product-header">
           <h1>{product.title}</h1>
-          <button onClick={prevClick}>Précédent</button>
-          <div>
-            <img src={productPictures[index]} alt="Aménagement intérieur" />
-            {index + 1}/{productPictures.length}
-          </div>
-          <button onClick={nextClick}>Suivant</button>
+          <Slideshow picture={productPictures} />
         </div>
         <div className="product-specs">Accordeons</div>
         {/* <ul>
