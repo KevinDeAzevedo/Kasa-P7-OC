@@ -32,12 +32,28 @@ export default function Product() {
     <div>
       <Navigation />
       <div className="product">
-        <div className="product-slider">Carrousel</div>
-        <div className="product-header">
-          <h1>{product.title}</h1>
-          <Slideshow picture={productPictures} />
+        <div className="product-slideshow">
+          slider
+          {/* <Slideshow picture={productPictures} /> */}
         </div>
-        <div className="product-specs">Accordeons</div>
+        <div className="product-header">
+          <div className="product-header-status">
+            <h1>{product.title}</h1>
+            <p>Location</p>
+            <div className="product-header-status-tags">
+              <div>Paris</div>
+              <div>Cozy</div>
+            </div>
+          </div>
+          <div className="product-header-detail">
+            <p>Alexandre Dumas</p>
+            <div>Stars</div>
+          </div>
+        </div>
+        <div className="product-specs">
+          <div>Accordeon n°1</div>
+          <div>Accordeon n°2</div>
+        </div>
         {/* <ul>
           {equipments.map((equipment, index) => (
             <li key={`${equipment}-${index}`}>{equipment}</li>
