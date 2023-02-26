@@ -12,13 +12,13 @@ export default function Slideshow(props) {
     return index >= picture.length - 1 ? setIndex(0) : setIndex(index + 1);
   }
   return (
-    <div>
+    <div className="slidewrapper">
       <button onClick={prevClick}>Précédent</button>
-      <div>
-        <img src={picture[index]} alt="Aménagement intérieur" />
-        {index + 1}/{picture.length}
-      </div>
       <button onClick={nextClick}>Suivant</button>
+      {index + 1}/{picture.length}
+      <div className="slidewrapper-images">
+        <img src={picture[index]} alt="Aménagement intérieur" className="" />
+      </div>
     </div>
   );
 }

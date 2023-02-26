@@ -34,7 +34,7 @@ export default function Product() {
       <div className="product">
         <div className="product-slideshow">
           slider
-          {/* <Slideshow picture={productPictures} /> */}
+          <Slideshow picture={productPictures} />
         </div>
         <div className="product-header">
           <div className="product-header-status">
