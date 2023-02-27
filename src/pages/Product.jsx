@@ -13,7 +13,7 @@ export default function Product() {
   const [productTags, setProductTags] = useState([]);
   const [productHost, setProductHost] = useState([]);
   const [productDescription, setproductDescription] = useState();
-  const [productEquipments, setproductEquipments] = useState();
+  const [productEquipments, setproductEquipments] = useState([]);
   const stuff = (
     <ul>
       {productEquipments.map((equipment, index) => (
@@ -35,7 +35,6 @@ export default function Product() {
         setproductDescription(foundProduct.description);
         setproductEquipments(foundProduct.equipments);
       } catch (error) {
-        console.error(error);
         navigate('*');
       }
     }

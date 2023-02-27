@@ -18,7 +18,7 @@ export default function Accordion(props) {
           )}
         </div>
       </div>
-      {isVisible && <p className="accordion-content">{content}</p>}
+      {isVisible && <div className="accordion-content">{content}</div>}
     </div>
   );
 }
