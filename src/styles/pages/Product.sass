@@ -1,17 +1,13 @@
 .product
-  border: 1px solid black
   &-slideshow
-    border: 1px solid black
   &-header
     display: flex
     flex-direction: row
     justify-content: space-between
-    border: 1px solid black
     @media screen and (max-width: map-get($breakpoints, mobile))
       flex-direction: column
     &-status
       width: 100%
-      border: 1px solid black
       &-tags
         ul
           display: flex
@@ -37,7 +33,6 @@
         display: flex
         align-items: center
         text-align: right
-        border: 1px solid green
         &-avatar
           position: relative
           min-width: 64px
@@ -56,6 +51,5 @@
     display: flex
     flex-direction: row
     gap: 2%
-    border: 1px solid black
     @media screen and (max-width: map-get($breakpoints, mobile))
       flex-direction: column
