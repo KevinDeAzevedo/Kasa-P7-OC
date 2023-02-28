@@ -12,6 +12,7 @@ export default function Product() {
   const [productPictures, setProductPictures] = useState([]);
   const [productTags, setProductTags] = useState([]);
   const [productHost, setProductHost] = useState([]);
+  const rating = Number(product.rating);
   const [productDescription, setproductDescription] = useState();
   const [productEquipments, setproductEquipments] = useState([]);
   const stuff = (
@@ -67,7 +68,11 @@ export default function Product() {
                 <img src={productHost.picture} alt="Portrait de l'hôte" />
               </div>
             </div>
-            <div>{product.rating}</div>
+            <div>
+              {Array.from({ length: rating }, (_, i) => (
+                <span key={i}>*</span>
+              ))}
+            </div>
           </div>
         </div>
         <div className="product-specs">
