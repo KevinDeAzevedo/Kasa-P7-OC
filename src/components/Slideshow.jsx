@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import ArrowRight from '../assets/right-arrow.svg';
+import ArrowLeft from '../assets/left-arrow.svg';
 
 export default function Slideshow(props) {
   const { picture } = props;
@@ -13,9 +15,13 @@ export default function Slideshow(props) {
   }
   return (
     <div className="slidewrapper">
-      <button onClick={prevClick}>Précédent</button>
-      <button onClick={nextClick}>Suivant</button>
-      {index + 1}/{picture.length}
+      <div className="slidewrapper-buttons">
+        <img onClick={prevClick} src={ArrowLeft} alt="Précédent" />
+        <img onClick={nextClick} src={ArrowRight} alt="Suivant" />
+      </div>
+      <div className="slidewrapper-count">
+        {index + 1}/{picture.length}
+      </div>
       <div className="slidewrapper-images">
         <img src={picture[index]} alt="Aménagement intérieur" className="" />
       </div>
