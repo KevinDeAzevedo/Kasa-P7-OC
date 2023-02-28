@@ -9,8 +9,18 @@
     &-status
       border: 1px solid black
       &-tags
-        display: flex
-        border: 1px solid black
+        ul
+          display: flex
+          flex-wrap: wrap
+          li
+            display: inline
+            margin-right: 1%
+            padding: 5px 30px
+            background-color: $primary-color
+            color: white
+            font-size: 0.9rem
+            border-radius: 10px
+
     &-detail
       text-align: right
       border: 1px solid red

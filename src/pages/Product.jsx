@@ -58,8 +58,6 @@ export default function Product() {
                   <li key={`${tag}-${index}`}>{tag}</li>
                 ))}
               </ul>
-              <div>Paris</div>
-              <div>Cozy</div>
             </div>
           </div>
           <div className="product-header-detail">
