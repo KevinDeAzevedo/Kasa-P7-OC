@@ -61,8 +61,12 @@ export default function Product() {
             </div>
           </div>
           <div className="product-header-detail">
-            <img src={productHost.picture} alt="Portrait de l'hôte" />
-            <p>{productHost.name}</p>
+            <div className="product-header-detail-host">
+              <p>{productHost.name}</p>
+              <div className="product-header-detail-host-avatar">
+                <img src={productHost.picture} alt="Portrait de l'hôte" />
+              </div>
+            </div>
             <div>{product.rating}</div>
           </div>
         </div>
