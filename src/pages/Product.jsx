@@ -4,6 +4,8 @@ import Slideshow from '../components/Slideshow';
 import Accordion from '../components/Accordion';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import StarActive from '../assets/star-active.svg';
+import StarInactive from '../assets/star-inactive.svg';
 
 export default function Product() {
   const navigate = useNavigate();
@@ -68,9 +70,12 @@ export default function Product() {
                 <img src={productHost.picture} alt="Portrait de l'hôte" />
               </div>
             </div>
-            <div>
+            <div className="product-header-detail-host-rating">
               {Array.from({ length: rating }, (_, i) => (
-                <span key={i}>*</span>
+                <img key={i} src={StarActive} alt="*" />
+              ))}
+              {Array.from({ length: 5 - rating }, (_, i) => (
+                <img key={i} src={StarInactive} alt="*" />
               ))}
             </div>
           </div>
