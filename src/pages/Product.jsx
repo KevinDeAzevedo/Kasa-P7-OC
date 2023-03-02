@@ -4,6 +4,7 @@ import Slideshow from '../components/Slideshow';
 import Accordion from '../components/Accordion';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import Tags from '../components/Tags';
 import StarActive from '../assets/star-active.svg';
 import StarInactive from '../assets/star-inactive.svg';
 
@@ -55,13 +56,7 @@ export default function Product() {
           <div className="product-header-status">
             <h1>{product.title}</h1>
             <p>{product.location}</p>
-            <div className="product-header-status-tags">
-              <ul>
-                {productTags.map((tag, index) => (
-                  <li key={`${tag}-${index}`}>{tag}</li>
-                ))}
-              </ul>
-            </div>
+            <Tags tags={productTags} />
           </div>
           <div className="product-header-detail">
             <div className="product-header-detail-host">
