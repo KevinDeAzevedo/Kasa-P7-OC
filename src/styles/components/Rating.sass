@@ -1,0 +1,15 @@
+.rating
+  display: flex
+  justify-content: space-between
+  padding: 20px 0
+  width: 180px
+  @media screen and (max-width: map-get($breakpoints, mobile))
+    justify-content: flex-start
+    padding: 0
+  img
+    width: 30px
+    height: 30px
+    @media screen and (max-width: map-get($breakpoints, mobile))
+      width: 5vw
+      height: auto
+      margin-right: 5px
