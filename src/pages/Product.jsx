@@ -5,6 +5,7 @@ import Accordion from '../components/Accordion';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Tags from '../components/Tags';
+import Host from '../components/Host';
 import Rating from '../components/Rating';
 
 export default function Product() {
@@ -58,12 +59,7 @@ export default function Product() {
             <Tags tags={productTags} />
           </div>
           <div className="product-header-detail">
-            <div className="product-header-detail-host">
-              <p>{productHost.name}</p>
-              <div className="product-header-detail-host-avatar">
-                <img src={productHost.picture} alt="Portrait de l'hôte" />
-              </div>
-            </div>
+            <Host name={productHost.name} picture={productHost.picture} />
             <Rating rating={rating} />
           </div>
         </div>
