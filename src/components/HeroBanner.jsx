@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export default function HeroBanner(props) {
   const { title, image } = props;
   return (
@@ -9,3 +11,8 @@ export default function HeroBanner(props) {
     </div>
   );
 }
+
+HeroBanner.propTypes = {
+  title: PropTypes.string,
+  image: PropTypes.string,
+};

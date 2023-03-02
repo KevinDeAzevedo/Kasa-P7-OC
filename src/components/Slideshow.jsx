@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import ArrowRight from '../assets/right-arrow.svg';
 import ArrowLeft from '../assets/left-arrow.svg';
 
@@ -28,3 +29,7 @@ export default function Slideshow(props) {
     </div>
   );
 }
+
+Slideshow.propTypes = {
+  picture: PropTypes.array,
+};

@@ -1,11 +1,11 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import ArrowBot from '../assets/arrow-bot.svg';
 import ArrowUp from '../assets/arrow-up.svg';
 
 export default function Accordion(props) {
   const { title, content } = props;
   const [isVisible, setVisible] = useState(false);
-
   return (
     <div className="accordion">
       <div onClick={() => setVisible(!isVisible)} className="accordion-title">
@@ -18,7 +18,20 @@ export default function Accordion(props) {
           )}
         </div>
       </div>
-      {isVisible && <div className="accordion-content">{content}</div>}
+      {isVisible && (
+        <div className="accordion-content">
+          {typeof content === 'string' ? (
+            <p>{content}</p>
+          ) : (
+            <div>{content}</div>
+          )}
+        </div>
+      )}
     </div>
   );
 }
+
+Accordion.propTypes = {
+  title: PropTypes.string,
+  conent: PropTypes.node,
+};

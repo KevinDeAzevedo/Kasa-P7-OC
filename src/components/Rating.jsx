@@ -1,8 +1,8 @@
+import PropTypes from 'prop-types';
 import StarActive from '../assets/star-active.svg';
 import StarInactive from '../assets/star-inactive.svg';
 
-export default function Rating(props) {
-  const rating = props.rating;
+export default function Rating({ rating }) {
   return (
     <div className="rating">
       {Array.from({ length: rating }, (_, i) => (
@@ -14,3 +14,11 @@ export default function Rating(props) {
     </div>
   );
 }
+
+Rating.propTypes = {
+  rating: PropTypes.number,
+};
+
+Rating.defaultProps = {
+  rating: 0,
+};

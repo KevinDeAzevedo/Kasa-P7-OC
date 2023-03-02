@@ -1,5 +1,8 @@
+import PropTypes from 'prop-types';
+
 export default function Tags(props) {
   const tags = props.tags;
+
   return (
     <div className="tags">
       <ul>
@@ -10,3 +13,7 @@ export default function Tags(props) {
     </div>
   );
 }
+
+Tags.propTypes = {
+  tags: PropTypes.array,
+};

@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function Card(props) {
   const { title, image } = props;
@@ -12,3 +12,8 @@ export default function Card(props) {
     </div>
   );
 }
+
+Card.propTypes = {
+  title: PropTypes.string,
+  image: PropTypes.string,
+};

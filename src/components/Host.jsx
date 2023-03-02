@@ -1,5 +1,6 @@
-export default function Host(props) {
-  const { name, picture } = props;
+import PropTypes from 'prop-types';
+
+export default function Host({ name, picture }) {
   return (
     <div className="host">
       <p>{name}</p>
@@ -9,3 +10,13 @@ export default function Host(props) {
     </div>
   );
 }
+
+Host.propTypes = {
+  name: PropTypes.string,
+  picture: PropTypes.string,
+};
+
+Host.defaultProps = {
+  name: 'John Do',
+  picture: '../logo192.png',
+};
