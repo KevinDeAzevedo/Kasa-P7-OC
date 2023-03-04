@@ -7,12 +7,14 @@ import Accordion from '../components/Accordion';
 
 export default function About() {
   const [articles, setArticles] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function fetchData() {
       try {
         const response = await fetch('../data/a-propos.json');
         const data = await response.json();
+        setIsLoading(false);
         setArticles(data);
       } catch (error) {
         console.error(error);
@@ -24,13 +26,21 @@ export default function About() {
     <div>
       <Navigation />
       <HeroBanner image={heroabout} />
-      <div className="about-content">
-        {articles.map((article, index) => (
-          <div key={`${article}-${index}`}>
-            <Accordion title={article.title} content={article.content} ui="" />
-          </div>
-        ))}
-      </div>
+      {isLoading ? (
+        <p>Chargement...</p>
+      ) : (
+        <div className="about-content">
+          {articles.map((article, index) => (
+            <div key={`${article}-${index}`}>
+              <Accordion
+                title={article.title}
+                content={article.content}
+                ui=""
+              />
+            </div>
+          ))}
+        </div>
+      )}
       <Footer />
     </div>
   );

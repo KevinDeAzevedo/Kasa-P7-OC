@@ -11,6 +11,7 @@ import Rating from '../components/Rating';
 export default function Product() {
   const navigate = useNavigate();
   const { id } = useParams();
+  const [isLoading, setIsLoading] = useState(true);
   const [product, setProduct] = useState([]);
   const [productPictures, setProductPictures] = useState([]);
   const [productTags, setProductTags] = useState([]);
@@ -31,6 +32,7 @@ export default function Product() {
       try {
         const response = await fetch('../data/logements.json');
         const data = await response.json();
+        setIsLoading(false);
         const foundProduct = data.find((product) => product.id === id);
         setProduct(foundProduct);
         setProductTags(foundProduct.tags);
@@ -48,30 +50,34 @@ export default function Product() {
   return (
     <div>
       <Navigation />
-      <div className="product">
-        <div className="product-slideshow">
-          <Slideshow picture={productPictures} />
-        </div>
-        <div className="product-header">
-          <div className="product-header-status">
-            <h1>{product.title}</h1>
-            <p>{product.location}</p>
-            <Tags tags={productTags} />
+      {isLoading ? (
+        <p>Chargement...</p>
+      ) : (
+        <div className="product">
+          <div className="product-slideshow">
+            <Slideshow picture={productPictures} />
           </div>
-          <div className="product-header-detail">
-            <Host name={productHost.name} picture={productHost.picture} />
-            <Rating rating={rating} />
+          <div className="product-header">
+            <div className="product-header-status">
+              <h1>{product.title}</h1>
+              <p>{product.location}</p>
+              <Tags tags={productTags} />
+            </div>
+            <div className="product-header-detail">
+              <Host name={productHost.name} picture={productHost.picture} />
+              <Rating rating={rating} />
+            </div>
+          </div>
+          <div className="product-specs">
+            <Accordion
+              title="Description"
+              content={productDescription}
+              ui="--product"
+            />
+            <Accordion title="Équipements" content={stuff} ui="--product" />
           </div>
         </div>
-        <div className="product-specs">
-          <Accordion
-            title="Description"
-            content={productDescription}
-            ui="--product"
-          />
-          <Accordion title="Équipements" content={stuff} ui="--product" />
-        </div>
-      </div>
+      )}
       <Footer />
     </div>
   );
