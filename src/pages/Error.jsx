@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Navigation from '../components/Navigation';
@@ -6,6 +7,10 @@ import Footer from '../components/Footer';
 export default function About() {
   return (
     <>
+      <Helmet>
+        <title>Kasa | 404 page introuvable</title>
+        <meta name="description" content="Page d'erreur" />
+      </Helmet>
       <Navigation />
       <div className="error">
         <h1>

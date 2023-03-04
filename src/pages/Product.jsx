@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Slideshow from '../components/Slideshow';
@@ -49,6 +50,10 @@ export default function Product() {
 
   return (
     <div>
+      <Helmet>
+        <title>Kasa | Logement</title>
+        <meta name="description" content="Page logement" />
+      </Helmet>
       <Navigation />
       {isLoading ? (
         <p>Chargement...</p>

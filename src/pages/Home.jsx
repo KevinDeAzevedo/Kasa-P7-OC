@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Navigation from '../components/Navigation';
@@ -27,6 +28,10 @@ export default function Home() {
 
   return (
     <div>
+      <Helmet>
+        <title>Kasa | Accueil</title>
+        <meta name="description" content="Page d'accueil" />
+      </Helmet>
       <Navigation />
       <HeroBanner title={'Chez vous, partout et ailleurs'} image={herohome} />
       {isLoading ? (

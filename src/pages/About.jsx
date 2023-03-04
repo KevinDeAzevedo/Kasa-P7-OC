@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import { useEffect, useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -24,6 +25,10 @@ export default function About() {
   }, []);
   return (
     <div>
+      <Helmet>
+        <title>Kasa | À propos</title>
+        <meta name="description" content="Page à propos" />
+      </Helmet>
       <Navigation />
       <HeroBanner image={heroabout} />
       {isLoading ? (
