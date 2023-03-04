@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Kasa-P7-OC/static/css/main.62be63c9.css",
+    "main.js": "/Kasa-P7-OC/static/js/main.f6c6c474.js",
+    "static/media/hero-about.webp": "/Kasa-P7-OC/static/media/hero-about.6ef517aab252bba67ec8.webp",
+    "static/media/hero-home.webp": "/Kasa-P7-OC/static/media/hero-home.057f6a1fc4f3a12fed9e.webp",
+    "index.html": "/Kasa-P7-OC/index.html",
+    "static/media/arrow-bot.svg": "/Kasa-P7-OC/static/media/arrow-bot.ecf1488896136f153bb1ae871e39b72d.svg",
+    "static/media/arrow-up.svg": "/Kasa-P7-OC/static/media/arrow-up.b052dd29e3a2bab76700eee79e133c37.svg",
+    "static/media/star-active.svg": "/Kasa-P7-OC/static/media/star-active.436cdaa58c6c68e5ff88584373bcd2b1.svg",
+    "static/media/star-inactive.svg": "/Kasa-P7-OC/static/media/star-inactive.6870d270bf24c77b6cb6da4a51d85c40.svg",
+    "static/media/right-arrow.svg": "/Kasa-P7-OC/static/media/right-arrow.88153a5d119c2744ffe34dca1ef843df.svg",
+    "static/media/left-arrow.svg": "/Kasa-P7-OC/static/media/left-arrow.19918a1634b1441a25ae0b50e6b1f85b.svg",
+    "main.62be63c9.css.map": "/Kasa-P7-OC/static/css/main.62be63c9.css.map",
+    "main.f6c6c474.js.map": "/Kasa-P7-OC/static/js/main.f6c6c474.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.62be63c9.css",
+    "static/js/main.f6c6c474.js"
+  ]
+}
