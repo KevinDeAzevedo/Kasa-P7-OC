@@ -16,13 +16,17 @@ export default function Slideshow(props) {
   }
   return (
     <div className="slidewrapper">
-      <div className="slidewrapper-buttons">
-        <img onClick={prevClick} src={ArrowLeft} alt="Précédent" />
-        <img onClick={nextClick} src={ArrowRight} alt="Suivant" />
-      </div>
-      <div className="slidewrapper-count">
-        {index + 1}/{picture.length}
-      </div>
+      {picture.length > 1 ? (
+        <div>
+          <div className="slidewrapper-buttons">
+            <img onClick={prevClick} src={ArrowLeft} alt="Précédent" />
+            <img onClick={nextClick} src={ArrowRight} alt="Suivant" />
+          </div>
+          <div className="slidewrapper-count">
+            {index + 1}/{picture.length}
+          </div>
+        </div>
+      ) : null}
       <div className="slidewrapper-images">
         <img src={picture[index]} alt="Aménagement intérieur" className="" />
       </div>
