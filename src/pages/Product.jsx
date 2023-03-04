@@ -64,8 +64,12 @@ export default function Product() {
           </div>
         </div>
         <div className="product-specs">
-          <Accordion title="Description" content={productDescription} />
-          <Accordion title="Équipements" content={stuff} />
+          <Accordion
+            title="Description"
+            content={productDescription}
+            style="product"
+          />
+          <Accordion title="Équipements" content={stuff} style="product" />
         </div>
       </div>
       <Footer />

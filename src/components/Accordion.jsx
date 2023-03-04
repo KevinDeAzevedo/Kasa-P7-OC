@@ -4,11 +4,14 @@ import ArrowBot from '../assets/arrow-bot.svg';
 import ArrowUp from '../assets/arrow-up.svg';
 
 export default function Accordion(props) {
-  const { title, content } = props;
+  const { title, content, style } = props;
   const [isVisible, setVisible] = useState(false);
   return (
     <div className="accordion">
-      <div onClick={() => setVisible(!isVisible)} className="accordion-title">
+      <div
+        onClick={() => setVisible(!isVisible)}
+        className={`accordion-title accordion-title--${style}`}
+      >
         <h3>{title}</h3>
         <div className="accordion-arrow">
           {isVisible ? (
