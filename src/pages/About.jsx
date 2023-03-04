@@ -27,7 +27,7 @@ export default function About() {
       <div className="about-content">
         {articles.map((article, index) => (
           <div key={`${article}-${index}`}>
-            <Accordion title={article.title} content={article.content} />
+            <Accordion title={article.title} content={article.content} ui="" />
           </div>
         ))}
       </div>
