@@ -36,5 +36,6 @@ export default function Accordion(props) {
 
 Accordion.propTypes = {
   title: PropTypes.string,
-  conent: PropTypes.node,
+  content: PropTypes.node,
+  style: PropTypes.string,
 };
