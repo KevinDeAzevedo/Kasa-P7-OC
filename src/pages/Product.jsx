@@ -67,9 +67,9 @@ export default function Product() {
           <Accordion
             title="Description"
             content={productDescription}
-            ui="product"
+            ui="--product"
           />
-          <Accordion title="Équipements" content={stuff} ui="product" />
+          <Accordion title="Équipements" content={stuff} ui="--product" />
         </div>
       </div>
       <Footer />

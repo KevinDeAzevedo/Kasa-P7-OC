@@ -10,7 +10,7 @@ export default function Accordion(props) {
     <div className="accordion">
       <div
         onClick={() => setVisible(!isVisible)}
-        className={`accordion-title accordion-title--${ui}`}
+        className={`accordion-title accordion-title${ui}`}
       >
         <h3>{title}</h3>
         <div className="accordion-arrow">
