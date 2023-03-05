@@ -55,34 +55,36 @@ export default function Product() {
         <meta name="description" content="Page logement" />
       </Helmet>
       <Navigation />
-      {isLoading ? (
-        <p>Chargement...</p>
-      ) : (
-        <div className="product">
-          <div className="product-slideshow">
-            <Slideshow picture={productPictures} />
-          </div>
-          <div className="product-header">
-            <div className="product-header-status">
-              <h1>{product.title}</h1>
-              <p>{product.location}</p>
-              <Tags tags={productTags} />
+      <main>
+        {isLoading ? (
+          <p>Chargement...</p>
+        ) : (
+          <article className="product">
+            <div className="product-slideshow">
+              <Slideshow picture={productPictures} />
             </div>
-            <div className="product-header-detail">
-              <Host name={productHost.name} picture={productHost.picture} />
-              <Rating rating={rating} />
+            <div className="product-header">
+              <div className="product-header-status">
+                <h1>{product.title}</h1>
+                <p>{product.location}</p>
+                <Tags tags={productTags} />
+              </div>
+              <div className="product-header-detail">
+                <Host name={productHost.name} picture={productHost.picture} />
+                <Rating rating={rating} />
+              </div>
             </div>
-          </div>
-          <div className="product-specs">
-            <Accordion
-              title="Description"
-              content={productDescription}
-              ui="--product"
-            />
-            <Accordion title="Équipements" content={stuff} ui="--product" />
-          </div>
-        </div>
-      )}
+            <div className="product-specs">
+              <Accordion
+                title="Description"
+                content={productDescription}
+                ui="--product"
+              />
+              <Accordion title="Équipements" content={stuff} ui="--product" />
+            </div>
+          </article>
+        )}
+      </main>
       <Footer />
     </div>
   );

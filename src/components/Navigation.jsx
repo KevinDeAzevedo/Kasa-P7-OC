@@ -5,20 +5,25 @@ import Logo from './Logo';
 
 const Navigation = () => {
   return (
-    <div className="header">
+    <header className="header">
       <Logo />
-      <ul className="navigation">
-        <NavLink to="/" className={(nav) => (nav.isActive ? 'nav-active' : '')}>
-          <li>Accueil</li>
-        </NavLink>
-        <NavLink
-          to="/a-propos"
-          className={(nav) => (nav.isActive ? 'nav-active' : '')}
-        >
-          <li>À Propos</li>
-        </NavLink>
-      </ul>
-    </div>
+      <nav>
+        <ul className="navigation">
+          <NavLink
+            to="/"
+            className={(nav) => (nav.isActive ? 'nav-active' : '')}
+          >
+            <li>Accueil</li>
+          </NavLink>
+          <NavLink
+            to="/a-propos"
+            className={(nav) => (nav.isActive ? 'nav-active' : '')}
+          >
+            <li>À Propos</li>
+          </NavLink>
+        </ul>
+      </nav>
+    </header>
   );
 };
 

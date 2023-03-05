@@ -15,7 +15,7 @@ export default function Slideshow(props) {
     return index >= picture.length - 1 ? setIndex(0) : setIndex(index + 1);
   }
   return (
-    <div className="slidewrapper">
+    <section className="slidewrapper">
       {picture.length > 1 ? (
         <div>
           <div className="slidewrapper-buttons">
@@ -30,7 +30,7 @@ export default function Slideshow(props) {
       <div className="slidewrapper-images">
         <img src={picture[index]} alt="Aménagement intérieur" className="" />
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -27,25 +27,27 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <>
       <Helmet>
         <title>Kasa | Accueil</title>
         <meta name="description" content="Page d'accueil" />
       </Helmet>
       <Navigation />
-      <HeroBanner title={'Chez vous, partout et ailleurs'} image={herohome} />
-      {isLoading ? (
-        <p>Chargement...</p>
-      ) : (
-        <div className="list">
-          {items.map((item) => (
-            <NavLink to={`/logement/${item.id}`} key={item.id}>
-              <Card title={item.title} image={item.cover} />
-            </NavLink>
-          ))}
-        </div>
-      )}
+      <main>
+        <HeroBanner title={'Chez vous, partout et ailleurs'} image={herohome} />
+        {isLoading ? (
+          <p>Chargement...</p>
+        ) : (
+          <section className="list">
+            {items.map((item) => (
+              <NavLink to={`/logement/${item.id}`} key={item.id}>
+                <Card title={item.title} image={item.cover} />
+              </NavLink>
+            ))}
+          </section>
+        )}
+      </main>
       <Footer />
-    </div>
+    </>
   );
 }

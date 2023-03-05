@@ -4,12 +4,12 @@ export default function Card(props) {
   const { title, image } = props;
 
   return (
-    <div className="card">
+    <article className="card">
       <h3 className="card-title">{title}</h3>
       <div className="card-image">
-        <img src={image} alt="" />
+        <img src={image} alt="Aperçu de l'intérieur du logement" />
       </div>
-    </div>
+    </article>
   );
 }
 

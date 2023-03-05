@@ -24,29 +24,31 @@ export default function About() {
     fetchData();
   }, []);
   return (
-    <div>
+    <>
       <Helmet>
         <title>Kasa | À propos</title>
         <meta name="description" content="Page à propos" />
       </Helmet>
       <Navigation />
-      <HeroBanner image={heroabout} />
-      {isLoading ? (
-        <p>Chargement...</p>
-      ) : (
-        <div className="about-content">
-          {articles.map((article, index) => (
-            <div key={`${article}-${index}`}>
-              <Accordion
-                title={article.title}
-                content={article.content}
-                ui=""
-              />
-            </div>
-          ))}
-        </div>
-      )}
+      <main>
+        <HeroBanner image={heroabout} />
+        {isLoading ? (
+          <p>Chargement...</p>
+        ) : (
+          <section className="about-content">
+            {articles.map((article, index) => (
+              <article key={`${article}-${index}`}>
+                <Accordion
+                  title={article.title}
+                  content={article.content}
+                  ui=""
+                />
+              </article>
+            ))}
+          </section>
+        )}
+      </main>
       <Footer />
-    </div>
+    </>
   );
 }

@@ -12,15 +12,17 @@ export default function About() {
         <meta name="description" content="Page d'erreur" />
       </Helmet>
       <Navigation />
-      <div className="error">
-        <h1>
-          <span className="error-code">404</span> Oups! La page que vous
-          demandez n'existe pas.
-        </h1>
-        <NavLink to="/" className="error-link">
-          Retourner sur la page d’accueil
-        </NavLink>
-      </div>
+      <main>
+        <div className="error">
+          <h1>
+            <span className="error-code">404</span> Oups! La page que vous
+            demandez n'existe pas.
+          </h1>
+          <NavLink to="/" className="error-link">
+            Retourner sur la page d’accueil
+          </NavLink>
+        </div>
+      </main>
       <Footer />
     </>
   );
