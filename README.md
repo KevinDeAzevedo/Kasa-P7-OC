@@ -3,7 +3,7 @@
 # Application Client Side Rendering (Kasa project)
 **Framework utilisé : Create React App**
 
-[Voir la version en ligne sur Vercel](https://vercel.com/kevindeazevedo/kasa-p7-oc)
+[Voir la version en ligne sur Vercel](https://kasa-p7-oc.vercel.app/)
 
 ## Mode développement
 `npm run dev`
